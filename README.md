@@ -4,7 +4,7 @@ This is a science project attempting to find the quickest way to iterate over th
 
 As of 5/31/2017, I see the following results on a system with a core i5 4570S running Windows 10 and Java 1.8.0u131.
 
-# Run complete. Total time: 00:06:53
+Run complete. Total time: 00:06:53
 
 Benchmark                                                                                                            (STRING)  Mode  Cnt         Score         Error  Units
 TokenizeBench.benchmarkIndexOfTokenize                                                                                  blarg  avgt   10   1000356.941 ±    6257.463  ns/op
