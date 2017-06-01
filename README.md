@@ -5,7 +5,7 @@ This is a science project attempting to find the quickest way to iterate over th
 As of 5/31/2017, I see the following results on a system with a core i5 4570S running Windows 10 and Java 1.8.0u131.
 
 Run complete. Total time: 00:06:53
-
+```
 Benchmark                                                                                                            (STRING)  Mode  Cnt         Score         Error  Units
 TokenizeBench.benchmarkIndexOfTokenize                                                                                  blarg  avgt   10   1000356.941 ±    6257.463  ns/op
 TokenizeBench.benchmarkIndexOfTokenize                                             blarg.bloop.blerg.bloooooh.blop.blerrrrrrp  avgt   10  21955772.122 ±  169178.713  ns/op
@@ -26,4 +26,5 @@ TokenizeBench.benchmarkSplitter2        blarg.bloop.blerg.bloooooh.blop.blerrrrr
 TokenizeBench.benchmarkStringTokenizer                                                                                  blarg  avgt   10   1661730.329 ±    6767.159  ns/op
 TokenizeBench.benchmarkStringTokenizer                                             blarg.bloop.blerg.bloooooh.blop.blerrrrrrp  avgt   10  26302259.488 ±  540307.260  ns/op
 TokenizeBench.benchmarkStringTokenizer                                            blarg.bloop.blerg.bloooooh.blop.blerrrrrrp,  avgt   10  26671257.616 ±  160417.100  ns/op
-TokenizeBench.benchmarkStringTokenizer  blarg.bloop.blerg.bloooooh.blop.blerrrrrrp.blarg.bloop.blerg.bloooooh.blop.blerrrrrrp  avgt   10  53423728.542 ±   32454.364  ns/op
+TokenizeBench.benchmarkStringTokenizer  blarg.bloop.blerg.bloooooh.blop.blerrrrrrp.blarg.bloop.blerg.bloooooh.blop.blerrrrrrp  avgt   10  53423728.542 ±   32454.364  ns/op
+```
