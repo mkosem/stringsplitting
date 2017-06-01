@@ -1,4 +1,4 @@
-package org.openjdk.jmh.samples;
+package mkosem;
 
 import java.util.StringTokenizer;
 import java.util.concurrent.TimeUnit;
