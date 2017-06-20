@@ -2,29 +2,38 @@
 
 This is a science project attempting to find the quickest way to iterate over the tokens in a single character delimited string.
 
-As of 5/31/2017, I see the following results on a system with a core i5 4570S running Windows 10 and Java 1.8.0u131.
+As of 5/31/2017, I see the following results on a system with a core i5 4570S running Clear Linux and Java 1.8.0u131.
 
-Run complete. Total time: 00:06:53
+
+# Run complete. Total time: 00:08:26
+
 ```
-Benchmark                                                                                                            (STRING)  Mode  Cnt         Score         Error  Units
-TokenizeBench.benchmarkIndexOfTokenize                                                                                  blarg  avgt   10   1000356.941 ±    6257.463  ns/op
-TokenizeBench.benchmarkIndexOfTokenize                                             blarg.bloop.blerg.bloooooh.blop.blerrrrrrp  avgt   10  21955772.122 ±  169178.713  ns/op
-TokenizeBench.benchmarkIndexOfTokenize                                            blarg.bloop.blerg.bloooooh.blop.blerrrrrrp,  avgt   10  22067222.147 ±  122428.885  ns/op
-TokenizeBench.benchmarkIndexOfTokenize  blarg.bloop.blerg.bloooooh.blop.blerrrrrrp.blarg.bloop.blerg.bloooooh.blop.blerrrrrrp  avgt   10  43939803.926 ±  374360.987  ns/op
-TokenizeBench.benchmarkSplit                                                                                            blarg  avgt   10   2352596.266 ±   28180.403  ns/op
-TokenizeBench.benchmarkSplit                                                       blarg.bloop.blerg.bloooooh.blop.blerrrrrrp  avgt   10  36233213.550 ±   99218.222  ns/op
-TokenizeBench.benchmarkSplit                                                      blarg.bloop.blerg.bloooooh.blop.blerrrrrrp,  avgt   10  37595089.107 ±   24385.015  ns/op
-TokenizeBench.benchmarkSplit            blarg.bloop.blerg.bloooooh.blop.blerrrrrrp.blarg.bloop.blerg.bloooooh.blop.blerrrrrrp  avgt   10  68028955.927 ± 1973091.913  ns/op
-TokenizeBench.benchmarkSplitter                                                                                         blarg  avgt   10   1120633.945 ±    4118.407  ns/op
-TokenizeBench.benchmarkSplitter                                                    blarg.bloop.blerg.bloooooh.blop.blerrrrrrp  avgt   10  22035001.570 ±  100277.825  ns/op
-TokenizeBench.benchmarkSplitter                                                   blarg.bloop.blerg.bloooooh.blop.blerrrrrrp,  avgt   10  22214934.849 ±  358100.427  ns/op
-TokenizeBench.benchmarkSplitter         blarg.bloop.blerg.bloooooh.blop.blerrrrrrp.blarg.bloop.blerg.bloooooh.blop.blerrrrrrp  avgt   10  44151947.360 ± 1371793.970  ns/op
-TokenizeBench.benchmarkSplitter2                                                                                        blarg  avgt   10    599649.980 ±    2477.461  ns/op
-TokenizeBench.benchmarkSplitter2                                                   blarg.bloop.blerg.bloooooh.blop.blerrrrrrp  avgt   10  18450579.270 ±   78035.085  ns/op
-TokenizeBench.benchmarkSplitter2                                                  blarg.bloop.blerg.bloooooh.blop.blerrrrrrp,  avgt   10  18581850.497 ±  505438.572  ns/op
-TokenizeBench.benchmarkSplitter2        blarg.bloop.blerg.bloooooh.blop.blerrrrrrp.blarg.bloop.blerg.bloooooh.blop.blerrrrrrp  avgt   10  40413312.604 ±  311052.712  ns/op
-TokenizeBench.benchmarkStringTokenizer                                                                                  blarg  avgt   10   1661730.329 ±    6767.159  ns/op
-TokenizeBench.benchmarkStringTokenizer                                             blarg.bloop.blerg.bloooooh.blop.blerrrrrrp  avgt   10  26302259.488 ±  540307.260  ns/op
-TokenizeBench.benchmarkStringTokenizer                                            blarg.bloop.blerg.bloooooh.blop.blerrrrrrp,  avgt   10  26671257.616 ±  160417.100  ns/op
-TokenizeBench.benchmarkStringTokenizer  blarg.bloop.blerg.bloooooh.blop.blerrrrrrp.blarg.bloop.blerg.bloooooh.blop.blerrrrrrp  avgt   10  53423728.542 ±   32454.364  ns/op
+Benchmark                                                                                                                                                                                                                                                (STRING)  Mode  Cnt          Score          Error  Units
+TokenizeBench.benchmarkIndexOfTokenize                                                                                                                                                                                                                      blarg  avgt   10    1029695.191 ±    50588.155  ns/op
+TokenizeBench.benchmarkIndexOfTokenize                                                                                                                                                                                                 blarg.bloop.blerg.bloooooh  avgt   10   13626011.278 ±   144747.636  ns/op
+TokenizeBench.benchmarkIndexOfTokenize                                                                                                                                                                     blarg.bloop.blerg.bloooooh.blor.blerrrrrrp.bleep.bloor  avgt   10   25984383.521 ±   734033.226  ns/op
+TokenizeBench.benchmarkIndexOfTokenize                                                                                                               blarg.bloop.blerg.bloooooh.blor.blerrrrrrp.bleep.bloor.blarg.bloon.blerg.bloooooh.blop.bleeerrrp.blorp.blopt  avgt   10   51583734.316 ±  2054573.716  ns/op
+TokenizeBench.benchmarkIndexOfTokenize  blarg.bloop.blerg.bloooooh.blor.blerrrrrrp.bleep.bloor.blarg.bloon.blerg.bloooooh.blop.bleeerrrp.blorp.blopt.tlarg.tloob.tlerg.tloooooh.tlor.tlerrrrrrb.tleeb.tloor.tlarg.tloon.tlerg.tloooooh.tlob.tleeerrrb.tlorb.tlobp  avgt   10  111161355.067 ±   194375.221  ns/op
+TokenizeBench.benchmarkSplit                                                                                                                                                                                                                                blarg  avgt   10    2303305.546 ±    12426.793  ns/op
+TokenizeBench.benchmarkSplit                                                                                                                                                                                                           blarg.bloop.blerg.bloooooh  avgt   10   26318058.966 ±      472.439  ns/op
+TokenizeBench.benchmarkSplit                                                                                                                                                                               blarg.bloop.blerg.bloooooh.blor.blerrrrrrp.bleep.bloor  avgt   10   45458413.882 ±     1418.263  ns/op
+TokenizeBench.benchmarkSplit                                                                                                                         blarg.bloop.blerg.bloooooh.blor.blerrrrrrp.bleep.bloor.blarg.bloon.blerg.bloooooh.blop.bleeerrrp.blorp.blopt  avgt   10   90919090.891 ±     8513.287  ns/op
+TokenizeBench.benchmarkSplit            blarg.bloop.blerg.bloooooh.blor.blerrrrrrp.bleep.bloor.blarg.bloon.blerg.bloooooh.blop.bleeerrrp.blorp.blopt.tlarg.tloob.tlerg.tloooooh.tlor.tlerrrrrrb.tleeb.tloor.tlarg.tloon.tlerg.tloooooh.tlob.tleeerrrb.tlorb.tlobp  avgt   10  170103671.117 ± 15889556.664  ns/op
+TokenizeBench.benchmarkSplitter                                                                                                                                                                                                                             blarg  avgt   10    1067674.949 ±     3563.464  ns/op
+TokenizeBench.benchmarkSplitter                                                                                                                                                                                                        blarg.bloop.blerg.bloooooh  avgt   10   14246564.577 ±   128155.813  ns/op
+TokenizeBench.benchmarkSplitter                                                                                                                                                                            blarg.bloop.blerg.bloooooh.blor.blerrrrrrp.bleep.bloor  avgt   10   27780248.608 ±      730.607  ns/op
+TokenizeBench.benchmarkSplitter                                                                                                                      blarg.bloop.blerg.bloooooh.blor.blerrrrrrp.bleep.bloor.blarg.bloon.blerg.bloooooh.blop.bleeerrrp.blorp.blopt  avgt   10   55560037.022 ±     1793.133  ns/op
+TokenizeBench.benchmarkSplitter         blarg.bloop.blerg.bloooooh.blor.blerrrrrrp.bleep.bloor.blarg.bloon.blerg.bloooooh.blop.bleeerrrp.blorp.blopt.tlarg.tloob.tlerg.tloooooh.tlor.tlerrrrrrb.tleeb.tloor.tlarg.tloon.tlerg.tloooooh.tlob.tleeerrrb.tlorb.tlobp  avgt   10  125018100.088 ±    42396.653  ns/op
+TokenizeBench.benchmarkSplitter2                                                                                                                                                                                                                            blarg  avgt   10     594081.564 ±      632.095  ns/op
+TokenizeBench.benchmarkSplitter2                                                                                                                                                                                                       blarg.bloop.blerg.bloooooh  avgt   10   10954781.221 ±    85566.408  ns/op
+TokenizeBench.benchmarkSplitter2                                                                                                                                                                           blarg.bloop.blerg.bloooooh.blor.blerrrrrrp.bleep.bloor  avgt   10   24575317.485 ±   445351.499  ns/op
+TokenizeBench.benchmarkSplitter2                                                                                                                     blarg.bloop.blerg.bloooooh.blor.blerrrrrrp.bleep.bloor.blarg.bloon.blerg.bloooooh.blop.bleeerrrp.blorp.blopt  avgt   10   52635991.258 ±     1449.076  ns/op
+TokenizeBench.benchmarkSplitter2        blarg.bloop.blerg.bloooooh.blor.blerrrrrrp.bleep.bloor.blarg.bloon.blerg.bloooooh.blop.bleeerrrp.blorp.blopt.tlarg.tloob.tlerg.tloooooh.tlor.tlerrrrrrb.tleeb.tloor.tlarg.tloon.tlerg.tloooooh.tlob.tleeerrrb.tlorb.tlobp  avgt   10  111119821.589 ±     1552.836  ns/op
+TokenizeBench.benchmarkStringTokenizer                                                                                                                                                                                                                      blarg  avgt   10    1664637.543 ±     9763.068  ns/op
+TokenizeBench.benchmarkStringTokenizer                                                                                                                                                                                                 blarg.bloop.blerg.bloooooh  avgt   10   16979842.073 ±   139698.724  ns/op
+TokenizeBench.benchmarkStringTokenizer                                                                                                                                                                     blarg.bloop.blerg.bloooooh.blor.blerrrrrrp.bleep.bloor  avgt   10   34487772.586 ±     9224.423  ns/op
+TokenizeBench.benchmarkStringTokenizer                                                                                                               blarg.bloop.blerg.bloooooh.blor.blerrrrrrp.bleep.bloor.blarg.bloon.blerg.bloooooh.blop.bleeerrrp.blorp.blopt  avgt   10   66673031.400 ±     2840.468  ns/op
+TokenizeBench.benchmarkStringTokenizer  blarg.bloop.blerg.bloooooh.blor.blerrrrrrp.bleep.bloor.blarg.bloon.blerg.bloooooh.blop.bleeerrrp.blorp.blopt.tlarg.tloob.tlerg.tloooooh.tlor.tlerrrrrrb.tleeb.tloor.tlarg.tloon.tlerg.tloooooh.tlob.tleeerrrb.tlorb.tlobp  avgt   10  145253148.276 ± 11384226.850  ns/op
+
+
 ```

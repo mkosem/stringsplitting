@@ -16,7 +16,7 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
 @Warmup(iterations = 10,batchSize = 200000, time = -1)
 @State(Scope.Benchmark)
 public class TokenizeBench{
-    @Param(value = {"blarg", "blarg.bloop.blerg.bloooooh.blop.blerrrrrrp", "blarg.bloop.blerg.bloooooh.blop.blerrrrrrp,", "blarg.bloop.blerg.bloooooh.blop.blerrrrrrp.blarg.bloop.blerg.bloooooh.blop.blerrrrrrp"})
+    @Param(value = {"blarg", "blarg.bloop.blerg.bloooooh", "blarg.bloop.blerg.bloooooh.blor.blerrrrrrp.bleep.bloor", "blarg.bloop.blerg.bloooooh.blor.blerrrrrrp.bleep.bloor.blarg.bloon.blerg.bloooooh.blop.bleeerrrp.blorp.blopt", "blarg.bloop.blerg.bloooooh.blor.blerrrrrrp.bleep.bloor.blarg.bloon.blerg.bloooooh.blop.bleeerrrp.blorp.blopt.tlarg.tloob.tlerg.tloooooh.tlor.tlerrrrrrb.tleeb.tloor.tlarg.tloon.tlerg.tloooooh.tlob.tleeerrrb.tlorb.tlobp"})
     private String STRING;
 
     @Benchmark
@@ -32,10 +32,11 @@ public class TokenizeBench{
     @Fork(1)
     public void benchmarkIndexOfTokenize(Blackhole bh) {
         int start = 0;
-        int end;
-        while ((end = STRING.indexOf('.', start)) != -1) {
-            bh.consume(STRING.substring(start, end).length());
+        int end = STRING.indexOf('.');
+        while (end != -1) {
+            bh.consume(STRING.substring(start, end));
             start = end + 1;
+            end = STRING.indexOf('.', start);
         }
         bh.consume(STRING.substring(start));
     }
