@@ -37,13 +37,13 @@ public class SplitIterator2 implements Iterator<String> {
         if (_end != -1) {
             value = _source.substring(_start, _end);
             _start = _end + 1;
+            _end = _source.indexOf(_delim, _start);
         } else if (_start != -1) {
             value = _source.substring(_start);
             _start = _end;
         } else {
             throw new NoSuchElementException();
         }
-        _end = _source.indexOf(_delim, _start);
         return value;
     }
 }
