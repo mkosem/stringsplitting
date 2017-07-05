@@ -28,7 +28,7 @@ public class SplitIterator2 implements Iterator<String> {
 
     @Override
     public boolean hasNext() {
-        return _end != -1;
+        return _start != -1;
     }
 
     @Override

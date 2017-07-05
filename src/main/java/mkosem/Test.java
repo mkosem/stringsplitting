@@ -26,10 +26,12 @@ public class Test {
         }
         System.out.println(STRING.substring(start));
 
+        System.out.println();
         Iterator<String> iter = new SplitIterator(STRING, '.');
         while (iter.hasNext()) {
             System.out.println(iter.next());
         }
+            System.out.println();
         Iterator<String> iter2 = new SplitIterator2(STRING, '.');
         while (iter2.hasNext()) {
             System.out.println(iter2.next());
