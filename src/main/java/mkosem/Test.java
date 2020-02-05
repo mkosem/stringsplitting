@@ -31,10 +31,15 @@ public class Test {
         while (iter.hasNext()) {
             System.out.println(iter.next());
         }
-            System.out.println();
+        System.out.println();
         Iterator<String> iter2 = new SplitIterator2(STRING, '.');
         while (iter2.hasNext()) {
             System.out.println(iter2.next());
+        }
+        System.out.println();
+        Iterator<String> iter3 = new SplitIterator3(STRING, '.');
+        while (iter3.hasNext()) {
+            System.out.println(iter3.next());
         }
     }
 }

@@ -58,6 +58,15 @@ public class TokenizeBench{
             bh.consume(value);
         }
     }
+    
+    @Benchmark
+    @Fork(1)
+    public void benchmarkSplitter3(Blackhole bh) {
+        Iterable<String> iterable = () -> new SplitIterator3(STRING, '.');
+        for (String value : iterable) {
+            bh.consume(value);
+        }
+    }
 
     @Benchmark
     @Fork(1)
