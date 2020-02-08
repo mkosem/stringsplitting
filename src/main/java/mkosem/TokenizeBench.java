@@ -28,6 +28,17 @@ public class TokenizeBench{
         }
     }
     
+    
+    @Benchmark
+    @Fork(1)
+    public void benchmarkIndexOfTokenizeAlt(Blackhole bh) {
+        int start = 0;
+        for (int idx = STRING.indexOf('.') ; idx != -1 ; idx = STRING.indexOf('.', start = idx + 1)) {
+            bh.consume(STRING.substring(start, idx));
+        }
+        bh.consume(STRING.substring(start));
+    }
+    
     @Benchmark
     @Fork(1)
     public void benchmarkIndexOfTokenize(Blackhole bh) {

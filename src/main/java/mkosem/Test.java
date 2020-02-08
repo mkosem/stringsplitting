@@ -25,6 +25,13 @@ public class Test {
             end = STRING.indexOf('.', start);
         }
         System.out.println(STRING.substring(start));
+        System.out.println();
+        
+        int start2 = 0;
+        for (int idx = STRING.indexOf('.') ; idx != -1 ; idx = STRING.indexOf('.', start2 = idx + 1)) {
+            System.out.println(STRING.substring(start2, idx));
+        }
+        System.out.println(STRING.substring(start2));
 
         System.out.println();
         Iterator<String> iter = new SplitIterator(STRING, '.');
